@@ -8,6 +8,12 @@ export class BookCreateDto {
 }
 
 
+export class BookUpdateDto {
+    name: string;
+    author: string;
+    pages: number;
+}
+
 export class BookModel {
     id:string;
     name: string;

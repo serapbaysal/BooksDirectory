@@ -24,7 +24,10 @@ export const BookSchema = new mongoose.Schema(
         author: String,
         pages: Number,
         publisher: String,
-        published: Date
+        published: {
+            type:Date,
+            default:Date.now
+        },
     }
 )
 

@@ -14,8 +14,8 @@ export class BooksService {
 
     }
 
-    async createUser(book: BookCreateDto): Promise<BookModel> {   // MongoDb promise döner, dolayısıyla yazılan fonksiyonlar da promise dönmeli
-        const createdBook = new this.userMongo();
+    async createBook(book: BookCreateDto): Promise<BookModel> {   // MongoDb promise döner, dolayısıyla yazılan fonksiyonlar da promise dönmeli
+        const createdBook = new this.userMongo(book);
         return await createdBook.save();
     }
 
